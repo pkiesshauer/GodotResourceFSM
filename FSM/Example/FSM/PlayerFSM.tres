@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FSM" load_steps=9 format=3 uid="uid://cuhew3ahncmqo"]
+
+[ext_resource type="Resource" uid="uid://bjg5ea4vsoe1g" path="res://FSM/Example/FSM/States/Idle.tres" id="1_tad00"]
+[ext_resource type="Script" path="res://FSM/Scripts/FSM.gd" id="1_usj4j"]
+[ext_resource type="Resource" uid="uid://8871mpavhpmh" path="res://FSM/Example/FSM/States/Jumping.tres" id="2_ilsnk"]
+[ext_resource type="Resource" uid="uid://dctfurc3muxyo" path="res://FSM/Example/FSM/States/Attacking.tres" id="3_3qo2k"]
+[ext_resource type="Resource" uid="uid://b15fhuqr5tax6" path="res://FSM/Example/FSM/Transitions/AttackToIdle.tres" id="4_gfg3s"]
+[ext_resource type="Resource" path="res://FSM/Example/FSM/Transitions/IdleToAttack.tres" id="5_dk74u"]
+[ext_resource type="Resource" uid="uid://cukxsq7i66y5i" path="res://FSM/Example/FSM/Transitions/IdleToJump.tres" id="6_58jal"]
+[ext_resource type="Resource" path="res://FSM/Example/FSM/Transitions/JumpToIdle.tres" id="7_bqx3r"]
+
+[resource]
+script = ExtResource("1_usj4j")
+States = Array[Resource("res://FSM/Scripts/State.gd")]([ExtResource("1_tad00"), ExtResource("2_ilsnk"), ExtResource("3_3qo2k")])
+Transitions = Array[Resource("res://FSM/Scripts/Transition.gd")]([ExtResource("4_gfg3s"), ExtResource("5_dk74u"), ExtResource("6_58jal"), ExtResource("7_bqx3r")])
+CurrentState = ExtResource("1_tad00")

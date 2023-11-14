@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="State" load_steps=2 format=3 uid="uid://dctfurc3muxyo"]
+
+[ext_resource type="Script" path="res://FSM/Scripts/State.gd" id="1_rao1j"]
+
+[resource]
+script = ExtResource("1_rao1j")
+StateName = "Attacking"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Condition" load_steps=2 format=3 uid="uid://bnoxavqq6ux0y"]
+
+[ext_resource type="Script" path="res://FSM/Scripts/Condition.gd" id="1_rleuq"]
+
+[resource]
+script = ExtResource("1_rleuq")
+ConditionName = "Attack"

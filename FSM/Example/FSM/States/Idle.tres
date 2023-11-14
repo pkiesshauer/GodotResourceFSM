@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="State" load_steps=2 format=3 uid="uid://bjg5ea4vsoe1g"]
+
+[ext_resource type="Script" path="res://FSM/Scripts/State.gd" id="1_5djwb"]
+
+[resource]
+script = ExtResource("1_5djwb")
+StateName = "Idle"

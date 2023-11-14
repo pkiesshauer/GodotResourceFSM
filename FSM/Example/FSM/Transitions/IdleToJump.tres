@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Transition" load_steps=5 format=3 uid="uid://cukxsq7i66y5i"]
+
+[ext_resource type="Script" path="res://FSM/Scripts/Transition.gd" id="1_a2uud"]
+[ext_resource type="Resource" uid="uid://cbmd661i7b6kb" path="res://FSM/Example/FSM/Conditions/Jump.tres" id="1_s5mlh"]
+[ext_resource type="Resource" uid="uid://bjg5ea4vsoe1g" path="res://FSM/Example/FSM/States/Idle.tres" id="2_kvk4q"]
+[ext_resource type="Resource" uid="uid://8871mpavhpmh" path="res://FSM/Example/FSM/States/Jumping.tres" id="4_utlmw"]
+
+[resource]
+script = ExtResource("1_a2uud")
+from = ExtResource("2_kvk4q")
+condition = ExtResource("1_s5mlh")
+to = ExtResource("4_utlmw")

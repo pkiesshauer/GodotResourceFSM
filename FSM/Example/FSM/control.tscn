@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://n5yovj8aa4mx"]
+
+[ext_resource type="Script" path="res://FSM/Example/FSM/Label.gd" id="1_w6dre"]
+[ext_resource type="Script" path="res://FSM/Example/FSM/ConditionButton.gd" id="2_0rtf1"]
+[ext_resource type="Resource" uid="uid://cbmd661i7b6kb" path="res://FSM/Example/FSM/Conditions/Jump.tres" id="3_qp0sf"]
+[ext_resource type="Resource" uid="uid://cuhew3ahncmqo" path="res://FSM/Example/FSM/PlayerFSM.tres" id="4_o0p8f"]
+[ext_resource type="Resource" uid="uid://bnoxavqq6ux0y" path="res://FSM/Example/FSM/Conditions/Attack.tres" id="5_q3qwt"]
+[ext_resource type="Resource" uid="uid://bt0h5c0dskrds" path="res://FSM/Example/FSM/Conditions/IsGrounded.tres" id="6_i57qr"]
+[ext_resource type="Resource" uid="uid://bcgyqf4fbjntv" path="res://FSM/Example/FSM/Conditions/EnemyDead.tres" id="7_m5d6a"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = -29.0
+offset_right = 159.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_w6dre")
+fsm = ExtResource("4_o0p8f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Jump" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Jump"
+script = ExtResource("2_0rtf1")
+condition = ExtResource("3_qp0sf")
+fsm = ExtResource("4_o0p8f")
+
+[node name="Attack" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Attack"
+script = ExtResource("2_0rtf1")
+condition = ExtResource("5_q3qwt")
+fsm = ExtResource("4_o0p8f")
+
+[node name="IsGrounded" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "IsGrounded"
+script = ExtResource("2_0rtf1")
+condition = ExtResource("6_i57qr")
+fsm = ExtResource("4_o0p8f")
+
+[node name="EnemyDead" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "EnemyDead"
+script = ExtResource("2_0rtf1")
+condition = ExtResource("7_m5d6a")
+fsm = ExtResource("4_o0p8f")
